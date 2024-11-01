@@ -1,0 +1,196 @@
+/* Base Styling */
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the search bar and filter dropdown */
+.search-filter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .search-filter-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* Light mode search bar */
+.search-bar.light-mode {
+    display: flex;
+    align-items: center;
+    background-color: hsl(0, 0%, 98%);
+    /* Very Light Gray */
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.search-bar.dark-mode {
+    background-color: hsl(209, 23%, 22%);
+    /* Dark Blue */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    /* Body Copy */
+    color: hsl(200, 15%, 8%);
+    /* Very Dark Blue (Light Mode Text) */
+    background: transparent;
+    width: 100%;
+    padding-left: 10px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.search-bar.dark-mode input {
+    color: hsl(0, 0%, 100%);
+    /* White for dark mode text */
+}
+
+.search-bar input::placeholder {
+    color: hsl(0, 0%, 52%);
+    /* Dark Gray for light mode input placeholder */
+}
+
+.search-bar.dark-mode input::placeholder {
+    color: hsl(0, 0%, 100%);
+    /* White for dark mode input placeholder */
+}
+
+/* Search icon */
+.search-icon.light-mode {
+    /* filter: brightness(0); */
+}
+
+.search-icon.dark-mode {
+    /* filter: brightness(10); */
+}
+
+/* Filter Dropdown */
+.filter-dropdown {
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    width: 100%;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.filter-dropdown.light-mode {
+    background-color: hsl(0, 0%, 98%);
+    /* Very Light Gray */
+    color: hsl(200, 15%, 8%);
+    /* Very Dark Blue for text */
+}
+
+.filter-dropdown.dark-mode {
+    background-color: hsl(209, 23%, 22%);
+    /* Dark Blue */
+    color: hsl(0, 0%, 100%);
+    /* White for text */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Container for the country cards */
+.countries-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.countries-container.light-mode {
+    background-color: hsl(0, 0%, 98%);
+    /* Very Light Gray */
+}
+
+.countries-container.dark-mode {
+    background-color: hsl(207, 26%, 17%);
+    /* Very Dark Blue */
+}
+
+/* Country Card */
+.country-card {
+    width: 260px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.country-card.light-mode {
+    background-color: hsl(0, 0%, 100%);
+    /* White for light mode elements */
+    color: hsl(200, 15%, 8%);
+    /* Very Dark Blue for text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.country-card.dark-mode {
+    background-color: hsl(209, 23%, 22%);
+    /* Dark Blue for elements */
+    color: hsl(0, 0%, 100%);
+    /* White for dark mode text */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.country-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    /* Lift effect */
+}
+
+.country-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+/* Country Details */
+.country-details {
+    padding: 20px;
+}
+
+.country-details h2 {
+    font-size: 18px;
+    /* Homepage Items */
+    margin: 0 0 10px 0;
+    font-weight: 800;
+    /* Bold for headings */
+}
+
+.country-details p {
+    font-size: 14px;
+    margin: 5px 0;
+    font-weight: 300;
+    /* Light for details */
+}
+
+.country-details.light-mode h2,
+.country-details.light-mode p {
+    color: hsl(200, 15%, 8%);
+    /* Very Dark Blue for text */
+}
+
+.country-details.dark-mode h2,
+.country-details.dark-mode p {
+    color: hsl(0, 0%, 100%);
+    /* White for dark mode text */
+}

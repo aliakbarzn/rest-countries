@@ -1,0 +1,52 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.light-mode {
+    background-color: hsl(0, 0%, 98%); /* Very Light Gray */
+    color: hsl(200, 15%, 8%); /* Very Dark Blue for text */
+}
+
+.navbar.dark-mode {
+    background-color: hsl(209, 23%, 22%); /* Dark Blue */
+    color: hsl(0, 0%, 100%); /* White text */
+}
+
+/* Navbar title */
+.navbar-title {
+    font-size: 24px;
+    font-weight: 800; /* Bold font weight */
+    margin: 0;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: inherit; /* Inherit color based on mode */
+}
+
+/* Dark Mode Toggle Icon */
+.dark-mode-toggle img {
+    width: 20px;
+    height: 20px;
+    transition: filter 0.3s ease; /* Smooth transition for filter */
+}
+
+/* Adjust icon filter */
+.dark-mode-toggle img.light-mode {
+    filter: invert(20%);
+}
+
+.dark-mode-toggle img.dark-mode {
+    filter: invert(100%);
+}
