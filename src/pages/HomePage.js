@@ -1,6 +1,6 @@
 
 import './HomePage.css'
-import icon from '../assets/icons/search_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg'
+import icon from '../assets/icons/search_light.svg'
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
