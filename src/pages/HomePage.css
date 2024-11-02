@@ -91,13 +91,23 @@ body {
     max-width: 200px;
     width: 100%;
     font-family: 'Nunito Sans', sans-serif;
+    border: none;
+}
+
+.filter-dropdown option {
+    margin: 5px;
+    padding: 5px;
+}
+
+.filter-dropdown.light-mode option {
+    color: hsl(0, 0%, 52%);
+
 }
 
 .filter-dropdown.light-mode {
     background-color: hsl(0, 0%, 98%);
     /* Very Light Gray */
-    color: hsl(200, 15%, 8%);
-    /* Very Dark Blue for text */
+    color: hsl(0, 0%, 52%);
 }
 
 .filter-dropdown.dark-mode {
@@ -132,7 +142,7 @@ body {
 /* Country Card */
 .country-card {
     width: 260px;
-    border-radius: 8px;
+    border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -187,10 +197,12 @@ body {
     /* Light for details */
 }
 
-.country-details.light-mode h2,
-.country-details.light-mode p {
+.country-details.light-mode h2 {
     color: hsl(200, 15%, 8%);
-    /* Very Dark Blue for text */
+}
+
+.country-details.light-mode p {
+    color: hsl(0, 0%, 52%);
 }
 
 .country-details.dark-mode h2,
