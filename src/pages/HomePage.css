@@ -151,18 +151,14 @@ body {
 
 .country-card.light-mode {
     background-color: hsl(0, 0%, 100%);
-    /* White for light mode elements */
     color: hsl(200, 15%, 8%);
-    /* Very Dark Blue for text */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .country-card.dark-mode {
     background-color: hsl(209, 23%, 22%);
-    /* Dark Blue for elements */
     color: hsl(0, 0%, 100%);
-    /* White for dark mode text */
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.03);
 }
 
 .country-card:hover {
@@ -209,4 +205,8 @@ body {
 .country-details.dark-mode p {
     color: hsl(0, 0%, 100%);
     /* White for dark mode text */
+}
+
+.country-details.dark-mode {
+    background-color: hsl(209, 23%, 22%);
 }
