@@ -5,7 +5,6 @@ body {
   color: var(--text-color);
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 
 :root {
@@ -30,10 +29,14 @@ body {
   --element-color: var(--element-color-dark);
 }
 
-.light-mode {
+.App {
+  min-height: 100vh;
+}
+
+.App.light-mode {
   background-color: hsl(0, 0%, 98%);
 }
 
-.dark-mode {
+.App.dark-mode {
   background-color: hsl(207, 26%, 17%);
 }
