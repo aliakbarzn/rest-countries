@@ -13,11 +13,13 @@ const DetailPage = (c) => {
     const [country, setCountry] = useState([])
     const { countrycode } = useParams()
     const { isDarkMode } = useTheme()
+    const [countries, setCountries] = useState([])
 
     useEffect(() => {
         const fetchCountry = async () => {
             try {
                 const response = await axios.get('/data.json')
+                setCountries(response.data)
                 const foundCountry = response.data.find(c => c.alpha3Code === countrycode)
                 setCountry(foundCountry)
             }
@@ -73,17 +75,21 @@ const DetailPage = (c) => {
                     <div className={`border-countries ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
                         <span className={`border-countries-title ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>Border Countries: </span>
                         {country.borders
-                            ? country.borders.map(border => (
-                                <span
+                            ? country.borders.map(border => {
+                                const borderCountry = countries.find(c => c.alpha3Code === border)
+                                return <span
                                     key={border}
                                     className={`border-country ${isDarkMode ? 'dark-mode' : 'light-mode'}`}
-                                    onClick={() => navigate(`/detail-page/${border}`)}>{border}</span>
-                            ))
+                                    onClick={() => navigate(`/detail-page/${border}`)}
+                                >
+                                    {borderCountry.name}
+                                </span>
+                            })
                             : <p>The country has no land border countries.</p>}
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

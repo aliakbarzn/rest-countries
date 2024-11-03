@@ -80,7 +80,7 @@ button:hover {
 /* Flag Image */
 .country-flag {
     max-width: 550px;
-    height: 360px;
+    max-height: 330px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
