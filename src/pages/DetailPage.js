@@ -74,18 +74,20 @@ const DetailPage = (c) => {
 
                     <div className={`border-countries ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
                         <span className={`border-countries-title ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>Border Countries: </span>
-                        {country.borders
-                            ? country.borders.map(border => {
-                                const borderCountry = countries.find(c => c.alpha3Code === border)
-                                return <span
-                                    key={border}
-                                    className={`border-country ${isDarkMode ? 'dark-mode' : 'light-mode'}`}
-                                    onClick={() => navigate(`/detail-page/${border}`)}
-                                >
-                                    {borderCountry.name}
-                                </span>
-                            })
-                            : <p>The country has no land border countries.</p>}
+                        <div className='border-countries-countries'>
+                            {country.borders
+                                ? country.borders.map(border => {
+                                    const borderCountry = countries.find(c => c.alpha3Code === border)
+                                    return <span
+                                        key={border}
+                                        className={`border-country ${isDarkMode ? 'dark-mode' : 'light-mode'}`}
+                                        onClick={() => navigate(`/detail-page/${border}`)}
+                                    >
+                                        {borderCountry.name}
+                                    </span>
+                                })
+                                : <p>The country has no land border countries.</p>}
+                        </div>
                     </div>
                 </div>
             </div>

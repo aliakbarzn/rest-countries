@@ -9,18 +9,22 @@
 
 .navbar.light-mode {
     background-color: #fff;
-    color: hsl(200, 15%, 8%); /* Very Dark Blue for text */
+    color: hsl(200, 15%, 8%);
+    /* Very Dark Blue for text */
 }
 
 .navbar.dark-mode {
-    background-color: hsl(209, 23%, 22%); /* Dark Blue */
-    color: hsl(0, 0%, 100%); /* White text */
+    background-color: hsl(209, 23%, 22%);
+    /* Dark Blue */
+    color: hsl(0, 0%, 100%);
+    /* White text */
 }
 
 /* Navbar title */
 .navbar-title {
     font-size: 24px;
-    font-weight: 800; /* Bold font weight */
+    font-weight: 800;
+    /* Bold font weight */
     margin: 0;
 }
 
@@ -32,14 +36,16 @@
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
-    color: inherit; /* Inherit color based on mode */
+    color: inherit;
+    /* Inherit color based on mode */
 }
 
 /* Dark Mode Toggle Icon */
 .dark-mode-toggle img {
     width: 20px;
     height: 20px;
-    transition: filter 0.3s ease; /* Smooth transition for filter */
+    transition: filter 0.3s ease;
+    /* Smooth transition for filter */
 }
 
 /* Adjust icon filter */
@@ -49,4 +55,26 @@
 
 .dark-mode-toggle img.dark-mode {
     filter: invert(100%);
+}
+
+@media (max-width: 375px) {
+
+    .navbar {
+        padding: 10px 20px;
+        height: 60px;
+    }
+
+    .navbar-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .dark-mode-toggle {
+        gap: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 300;
+
+    }
 }
